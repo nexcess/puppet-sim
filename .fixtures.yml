@@ -1,0 +1,7 @@
+fixtures:
+  repositories:
+    "stdlib": "git://github.com/puppetlabs/puppetlabs-stdlib.git"
+    "augeasproviders_shellvar": "git://github.com/hercules-team/augeasproviders_shellvar.git"
+    "augeasproviders_core": "git://github.com/hercules-team/augeasproviders_core.git"
+  symlinks:
+    sim: "#{source_dir}"
