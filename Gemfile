@@ -14,6 +14,12 @@ group :tests do
   gem 'metadata-json-lint'
 end
 
+## metadata-json-lint does this, but incorrectly so, which causes issues for ruby21
+gem 'public_suffix', '< 3' if RUBY_VERSION < '2.3'
+
+## another dependency w/"recent" version requirement updates
+gem 'net-ssh', '< 5' if RUBY_VERSION < '2.2'
+
 group :development do
   gem "puppet-blacksmith"
 end
