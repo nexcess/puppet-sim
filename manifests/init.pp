@@ -7,9 +7,9 @@ inherits sim::params {
     validate_absolute_path($config_file)
     validate_hash($config)
 
-    anchor {'sim::begin':} ->
-    class{'::sim::config':} ->
-    anchor {'sim::end':}
+    anchor {'sim::begin':}
+    -> class{'::sim::config':}
+    -> anchor {'sim::end':}
   }
   else {
     fail ("operating system ${::operatingsystem} is not supported by sim")

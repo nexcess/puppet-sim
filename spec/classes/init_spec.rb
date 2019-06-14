@@ -12,7 +12,6 @@ describe 'sim' do
           it { is_expected.to compile.with_all_deps }
           it { is_expected.to contain_class('sim::params') }
           it { is_expected.to contain_class('sim::config') }
-          it { is_expected.to_not contain_shellvar }
 	end
 
         context "custom config parameters" do
